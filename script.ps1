@@ -14,8 +14,8 @@ param(
 # Workaround for terminals that dont support progress bar https://github.com/PowerShell/Microsoft.PowerShell.Archive/issues/77
 $global:ProgressPreference = "SilentlyContinue"
 # Default to global if set and not ignored, otherwise use script scope defaults
-$UnzippedPath = If ($global:SimplyUnzippedPath -and !$IgnoreGlobalUnzippedPath) { $global:SimplyUnzippedPath } Else { $UnzippedPath }
-$ZippedPath = If ($global:SimplyZippedPath -and !$IgnoreGlobalZippedPath) { $global:SimplyZippedPath } Else { $ZippedPath }
+$UnzippedPath = If ($global:SimpleUnzippedPath -and !$IgnoreGlobalUnzippedPath) { $global:SimpleUnzippedPath } Else { $UnzippedPath }
+$ZippedPath = If ($global:SimpleZippedPath -and !$IgnoreGlobalZippedPath) { $global:SimpleZippedPath } Else { $ZippedPath }
 # To zip or to unzip
 If ($Zip) {
     $FromPath = $UnzippedPath
